@@ -1,0 +1,165 @@
+/** ##################################header############################################### **/
+header ul.flex {
+  gap: 16px;
+}
+header.flex {
+  justify-content: space-between;
+  padding: 1.2rem 2.4rem;
+}
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 40px #2323242a;
+}
+header a.menu {
+  display: none;
+}
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+}
+header ul li a:active {
+  font-size: 0.87rem;
+}
+header button {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+header a.moon {
+  display: block;
+  color: var(--title);
+  font-size: 22px;
+  cursor: pointer;
+  background-color: var(--bgHeader);
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: solid 1px rgba(244, 165, 96, 0.249);
+  transition: 0.2s ease;
+  box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
+}
+.icon-sun {
+  color: rgb(255, 165, 0);
+}
+header a.moon:hover {
+  color: var(--blue);
+  transform: scale(1.1);
+  border: solid 1px rgb(244, 165, 96);
+}
+header a.moon:active {
+  transform: scale(0.95);
+}
+header .fixed {
+  position: fixed;
+  /* top:0;
+    left: 0;
+    right: 0;
+    bottom:0; */
+  inset: 0;
+  background-color: rgb(40, 40, 48, 0.911);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  /* display: none; */
+}
+@keyframes mymove {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes close {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    scale: 1.1;
+  }
+}
+header .fixed ul.modal li a i:hover {
+  font-size: 20px;
+  animation: close 0.7s 1;
+  color: crimson;
+}
+header .fixed ul.modal {
+  animation: mymove 0.7s 1;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  opacity: 1;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+header .fixed ul.modal li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.77rem;
+  border-bottom: 1px solid VAR(--bordar);
+}
+header .fixed ul.modal li:last-child {
+  border: none;
+}
+header .fixed ul.modal li:first-child {
+  text-align: right;
+  border: none;
+  padding-bottom: 0;
+  padding-top: 0.2rem;
+}
+header .fixed ul.modal li a {
+  font-size: 1rem;
+}
+/* ################################################################################################# */
+@media (max-width: 700px) {
+  /* ######################Header##################### */
+  header.flex nav {
+    display: none;
+  }
+  header a.menu {
+    display: block;
+    color: var(--title);
+    font-size: 22px;
+    cursor: pointer;
+    background-color: var(--bgHeader);
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 1px rgba(244, 165, 96, 0.249);
+    transition: 0.2s ease;
+  }
+  header a.menu:hover {
+    color: var(--blue);
+    transform: scale(1.1);
+    border: solid 1px rgb(244, 165, 96);
+  }
+  header a.menu:active {
+    transform: scale(0.95);
+  }
+  /* header .fixed{
+        display: block;
+        backdrop-filter: blur(8px);
+        z-index: 999;
+    } */
+
+  /* ##################################################*/
+}

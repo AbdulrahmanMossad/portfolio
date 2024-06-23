@@ -1,0 +1,108 @@
+section.hero {
+  margin-top: 3rem;
+}
+/* ########################left section########################### */
+section.hero .left-section {
+  flex-grow: 1;
+  width: 100%;
+}
+section.hero .parent-avatar {
+  display: flex;
+}
+section.hero .avatar {
+  width: 100px;
+  border: solid 1px darkgoldenrod;
+  border-radius: 50%;
+  padding: 1px;
+  /* inside (inset)*/
+  box-shadow: 1px 1px 40px rgb(92, 67, 50) inset;
+  margin-right: 0.6rem;
+  transition: 0.1s ease;
+}
+
+section.hero .avatar:hover {
+  transform: scale(1.2) !important;
+  cursor: pointer;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* inset: 0; */
+  background-color: rgb(40, 40, 48, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  /* display: none; */
+}
+.large-avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.hero .l-avatar {
+  width: 40vw;
+  border: solid 1px darkgoldenrod;
+  border-radius: 50%;
+  padding: 1px;
+
+  /* inside (inset)*/
+  box-shadow: 1px 1px 40px rgb(92, 67, 50) inset;
+  margin-right: 0.6rem;
+  transition: 0.1s ease;
+}
+.exit-icon {
+  position: absolute;
+  top: -5%;
+  right: -20%;
+  z-index: 999;
+  width: 10px;
+  height: 10px;
+  color: white;
+}
+section.hero .icon-verified {
+  color: var(--blue);
+  font-size: 1.1rem;
+  align-self: flex-end;
+  margin-bottom: 0.3rem;
+}
+section.hero .left-section .title {
+  font-size: 2.8rem;
+  line-height: 3.3rem;
+  margin: 24px 0px;
+  color: var(--title);
+}
+section.hero .left-section .sub-title {
+  font-size: 0.9 rem;
+  line-height: 1.65rem;
+  margin-bottom: 32px;
+  color: var(--subtitle);
+}
+section.hero .left-section .all-icons {
+  font-size: 1.3rem;
+  gap: 1.5rem;
+  color: var(--subtitle);
+}
+section.hero .left-section .icon:hover {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--icon-hover);
+  transition: 0.3s;
+}
+.fa-brands {
+  color: var(--subtitle);
+}
+@media (max-width: 900px) {
+  section.hero .animation {
+    display: none;
+  }
+}
+/* @media (min-width: 1200px) {
+    section.hero .animation{
+        translate: 100px 0px;
+    }
+  } */
+@media (max-width: 600px) {
+}
